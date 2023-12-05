@@ -1,0 +1,1 @@
+# cc-generate-course-service
