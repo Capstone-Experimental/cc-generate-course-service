@@ -12,6 +12,7 @@ func main() {
 	app := fiber.New()
 
 	app.Use(middleware.JWTProtected())
+	// app.Use(middleware.FirebaseAuth())
 
 	routes.InitRoutes(app)
 
