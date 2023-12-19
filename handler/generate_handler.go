@@ -65,7 +65,7 @@ func GenerateCourseHandler(c *fiber.Ctx) error {
 	defer resp.Body.Close()
 
 	if resp.StatusCode != http.StatusOK {
-		fmt.Println("resp.StatusCode :", resp.StatusCode)
+		fmt.Println("Course Service :", resp.StatusCode)
 		return fmt.Errorf("request failed with status: %v", resp.Status)
 	}
 	fmt.Println("resp.StatusCode :", resp.StatusCode)
@@ -99,8 +99,7 @@ func GenerateCourseHandler(c *fiber.Ctx) error {
 	fmt.Println("course_id:", courseID)
 
 	// Return the response
-	return helper.Response(c, 200, "Success", fiber.Map{
+	return helper.Response(c, 200, "Course Generated Successfully", fiber.Map{
 		"course_id": courseID,
-		"message":   "Course Generated Successfully",
 	})
 }
