@@ -11,7 +11,7 @@ func main() {
 
 	app := fiber.New()
 
-	// Auth Middleware
+	// Auth middleware uncomment one of these
 	// app.Use(middleware.JWTProtected())
 	app.Use(middleware.FirebaseAuth())
 
