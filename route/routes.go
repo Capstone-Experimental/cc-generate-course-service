@@ -10,5 +10,5 @@ func InitRoutes(app *fiber.App) {
 
 	routes := app.Group("/api/v1/course")
 
-	routes.Post("/generate", handler.GenerateCourseHandler)
+	routes.Post("/generate", handler.GenerateCourseHandler) // Generate Course
 }

@@ -19,6 +19,7 @@ func NewGenerateHandler() *GenerateHandler {
 	return &GenerateHandler{}
 }
 
+// GenerateCourseHandler handles the generate course request
 func GenerateCourseHandler(c *fiber.Ctx) error {
 	url := "http://localhost:8081/api/v1/course/create"
 

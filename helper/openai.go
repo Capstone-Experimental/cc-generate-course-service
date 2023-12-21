@@ -17,6 +17,8 @@ func GetBasePrompt(prompt string) string {
 func GetBasePrompt2(prompt string) string {
 	return "menbuat panduan kursus dari `" + prompt + "`. untuk type_activity hanya `indoor` dan `outdoor`. untuk theme_activity menyesuaikan. terdiri dari title, desc, duration, subtitles[], didalam subtitles ada topic, shortdesc, content, didalam content ada opening, step[], closing"
 }
+
+// GenerateCourse generates course
 func GenerateCourse(promptRequest string) (string, error) {
 	err := godotenv.Load(".env")
 	if err != nil {
